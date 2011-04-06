@@ -1,0 +1,439 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+	<header class="caption">
+        <h1>{{ "title_section.header"|trans }}</h1>
+	</header>
+	<section class="slide" id="Cover">
+        <div>
+            <h2>{{ 'title'|trans }}</h2>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.product_backlog"|trans }}</h2>
+            <ol>
+                <li>{{ "story.performance"|trans }}</li>
+                <li class="next">{{ "story.security"|trans }}</li>
+            </ol>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.performance"|trans }}</h2>
+            <ul>
+                <li class="next">{{ "protocols.caching"|trans }} [<a target="_blank" href="{{ "link.url.rfc_2616"|trans }}">{{ "link.label.rfc_2616"|trans }}</a>]</li>
+                <li class="next">{{ "performance.traffic"|trans }}</li>
+                <li class="next">{{ "performance.robustness"|trans }}</li>
+                <li class="next"><mark class="important">{{ "performance.speed"|trans }}</mark></li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.security.risks"|trans }}</h2>
+            <ul>
+                <li>{{ "security.issue.privacy"|trans }}</li>
+                <li class="next">{{ "security.issue.authentication"|trans }}</li>
+                <li class="next">{{ "security.issue.integrity"|trans }}</li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.security.example"|trans }}</h2>
+            <div class="next" style="text-align: center">
+                <img class="yes-we-scan" src="{{ asset('bundles/weavingthewebslideshow/pictures/yes_we_scan.jpeg') }}" alt="" />
+            </div>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.security.counter_measures"|trans }}</h2>
+            <ul>
+                <li>{{ "security.proposal"|trans }}</li>
+                <li class="next">=> {{ "security.requirements.privacy"|trans }}</li>
+                <li class="next">=> {{ "security.requirements.authentication"|trans }}</li>
+                <li class="next">=> {{ "security.requirements.integrity"|trans }}</li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.protocols"|trans }}</h2>
+            <ol>
+                <ul>
+                    <li class="next"><del>SSL v1.0, SSL v2.0</del></li>
+                    <li class="next">SSL v3.0 [<a target="_blank" href="{{ "link.url.rfc_6101"|trans }}">{{ "link.label.rfc_6101"|trans }}</a>]{# ~ 66 pages#}</li>
+                    <li class="next">TLS v1.0 [<a target="_blank" href="{{ "link.url.rfc_2246"|trans }}">{{ "link.label.rfc_2246"|trans }}</a>]{# ~ 80 pages#}</li>
+                    <li class="next">TLS v1.1 [<a target="_blank" href="{{ "link.url.rfc_4346"|trans }}">{{ "link.label.rfc_4346"|trans }}</a>]{# ~ 104 pages #}</li>
+                    <li class="next">TLS v1.2 [<a target="_blank" href="{{ "link.url.rfc_5246"|trans }}">{{ "link.label.rfc_5246"|trans }}</a>]{# ~ 104 pages #}</li>
+                </ul>
+            </ol>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+           <div>
+           <h2>{{ "title_section.oxymore"|trans }}</h2>
+           <figure>
+               <blockquote>
+                   <p>{{ "oxymore.1"|trans }}<br />
+                   {{ "oxymore.2"|trans }}<br />
+                   <mark class="important">{{ "oxymore.3"|trans }}</mark></p>
+               </blockquote>
+               <figcaption>
+                   <a target="_blank" href="{{ "link.url.imperial_violet_overclocking_ssl"|trans }}">Adam Langley</a>
+               </figcaption>
+           </figure>
+           {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.handshaking'|trans }}</h2>
+            <img style="float:left;width: 400px" src="{{ asset('bundles/weavingthewebslideshow/pictures/handshake.png') }}" alt="" />
+            <ul style="float:left;font-size:20px;margin-left:20px;list-style-type:none">
+                <li>
+                    {{ 'handshaking.client.1'|trans }}
+                    <ul>
+                        <li class="next">{{ 'handshaking.client.2'|trans }}</li>
+                        <li class="next">{{ 'handshaking.client.3'|trans }}</li>
+                        <li class="next">{{ 'handshaking.client.4'|trans }}</li>
+                    </ul>
+                </li>
+                <li class="next">
+                    {{ 'handshaking.server.1'|trans }}
+                    <ul>
+                         <li class="next">{{ 'handshaking.server.2'|trans }}</li>
+                        <li class="next">{{ 'handshaking.server.3'|trans }}</li>
+                        <li class="next">{{ 'handshaking.server.4'|trans }}</li>
+                        <li class="next">{{ 'handshaking.server.5'|trans }}</li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.block_cipher'|trans }}</h2>
+            <img style="width: 700px" src="{{ asset('bundles/weavingthewebslideshow/pictures/encryption_cipher_block_chaining.png') }}" alt="" />
+            <ul>
+                <li>{{ 'definition.block_cipher.1'|trans }}</li>
+                <li>{{ 'definition.block_cipher.2'|trans|nl2br }}</li>
+                <li><span class="example">Exemple</span>:
+                    <a target="_blank" href="{{ 'link.url.aes'|trans }}">AES</a>,
+                    <a target="_blank" href="{{ 'link.url.blowfish'|trans }}">Blowfish</a>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.stream_cipher'|trans }}</h2>
+            <ul>
+                <li>{{ 'definition.stream_cipher.1'|trans }}
+
+                <li class="next">{{ 'definition.stream_cipher.2'|trans|nl2br }}</li>
+                <li class="next">{{ 'definition.stream_cipher.3'|trans|nl2br }}</li>
+                <li class="next"><span class="example">Exemple</span>:
+                    <ul>
+                        <li class="next"><a target="_blank" href="{{ 'link.url.rc4'|trans }}">{{ 'link.label.rc4'|trans }}</a></li>
+                        <li class="next"><img src="{{ asset('bundles/weavingthewebslideshow/pictures/random_number.png') }}" alt="" /></li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.vulnerabilities'|trans }} 1/4</h2>
+            <ul>
+                <li class="next">CRIME (Compression Ratio Info-leak Made Easy)
+                    <ul>
+                        <li class="next">{{ 'vulnerability.crime'|trans }}</li>
+                        <li class="next">{{ 'counter_measures.crime.1'|trans }}</li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.vulnerabilities'|trans }} 2/4</h2>
+            <ul>
+                <li class="next">BEAST (Browser Exploit Against SSL/TLS)
+                    <ul>
+                        <li class="next">{{ 'vulnerability.beast'|trans }}</li>
+                        <li class="next">{{ 'counter_measures.beast'|trans }}</li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.vulnerabilities'|trans }} 3/4</h2>
+            <ul>
+                <li class="next">BREACH (Browser Reconnaissance & Exfiltration via Adaptive Compression of Hypertext)
+                    <ul>
+                        <li class="next">{{ 'vulnerability.breach'|trans }}</li>
+                        <li class="next">{{ 'counter_measures.breach'|trans }}</li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.vulnerabilities'|trans }} 4/4</h2>
+            <ul>
+                <li class="next">{{ 'vulnerability.stripssl'|trans }}</li>
+                <li class="next">=> {{ 'vulnerability.hsts'|trans }}</li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.vulnerabilities'|trans }} 4/4</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/hsts.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.know_thyself'|trans }}</h2>
+            <ol>
+                <li><a target="_blank" href="{{ "link.url.ssllabs"|trans }}">{{ "link.label.ssllabs"|trans }}</a></li>
+                <li class="next"><a target="_blank" href="{{ "link.url.netcraft_extension"|trans }}">{{ "link.label.netcraft_extension"|trans }}</a></li>
+            </ol>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+
+	    </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ 'title_section.proof_of_concept'|trans }}</h2>
+            <ol>
+                <li>{{ 'proof_of_concept.backend'|trans }}</li>
+                <li class="next">{{ 'proof_of_concept.reverse_proxy_cache'|trans }}</li>
+                <li class="next">{{ 'proof_of_concept.ssl_proxy'|trans }}</li>
+                <li class="next">{{ 'proof_of_concept.stack'|trans }}</li>
+            </ol>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.backend_server"|trans }} 1/3</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/server-backend-virtualhost.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.backend_server"|trans }} 2/3</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/server-backend-symfony2.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.backend_server"|trans }} 3/3</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/server-backend-redirect.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.headers"|trans }} 1/2</h2>
+            <ul>
+                <li><a target="_blank" href="{{ "link.url.trusting_proxies"|trans }}">{{ "link.label.trusting_proxies"|trans }}</a></li>
+            </ul>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/front-controller.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.headers"|trans }} 2/2</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/ssl-proxy-headers.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.force_https"|trans }}</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/symfony2-scheme.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.force_https_or_not"|trans }}</h2>
+            <ul>
+                <li>{{ "subtleties.routing.1"|trans }}</li>
+                <li class="next">{{ "subtleties.routing.2"|trans }}</li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+	<section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.ssl_proxy"|trans }}</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/ssl-proxy-cipher.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+    <section class="slide">
+         <div>
+             <h2>{{ "title_section.subtleties.compression_ssl_proxy"|trans }}</h2>
+             <pre>
+                 {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/ssl-proxy-compression.html.twig" %}
+             </pre>
+             {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+ 	    </div>
+     </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.compression_backend"|trans }}</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/reverse-proxy-cache-accept-encoding.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.subtleties.compression_reverse_proxy_cache"|trans }}</h2>
+            <pre>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/codeblocks/reverse-proxy-cache-set-gzip.html.twig" %}
+            </pre>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.breaking_news"|trans }} 1/2</h2>
+            <ul>
+                <li class="next">
+                    {{ "introduction.about_security"|trans }}
+                    <ul>
+                        <li class="next"><a target="_blank" href="{{ "link.url.imperial_violet"|trans }}">{{ "link.label.imperial_violet"|trans }}</a></li>
+                        <li class="next"><a target="_blank" href="{{ "link.url.security_now"|trans }}">{{ "link.label.security_now"|trans }}</a></li>
+                        <li class="next"><a target="_blank" href="{{ "link.url.techsnap"|trans }}">{{ "link.label.techsnap"|trans }}</a></li>
+                        <li class="next">{{ "event.cantine.ssl.what"|trans|trim }}
+                                {{ "event.cantine.ssl.who"|trans }}
+                                {{ "event.cantine.ssl.where"|trans }}
+                                {{ "event.cantine.ssl.when"|trans }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.breaking_news"|trans }} 2/2</h2>
+            <ul>
+                <li class="next">
+                    {{ "introduction.about_testing"|trans }}
+                    <ul>
+                        <li class="next"><a target="_blank" href="{{ "link.url.cryptography_extensions_php"|trans }}">{{ "link.label.cryptography_extensions_php"|trans }}</a></li>
+                        <li class="next"><a target="_blank" href="{{ "link.url.crypto_js"|trans }}">{{ "link.label.crypto_js"|trans }}</a></li>
+                        <li class="next"><a target="_blank" href="{{ "link.url.pycrypto"|trans }}">{{ "link.label.pycrypto"|trans }}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.nice_to_have"|trans }}</h2>
+            <ul>
+                <li class="next">
+                    {{ "nice_to_have.benchmark"|trans }}
+                </li>
+                <li class="next">
+                    {{ "nice_to_have.cache_proxy"|trans }}
+                    <a target="_blank" href="{{ "link.url.other_cache_proxy"|trans }}">
+                        {{ "link.label.other_cache_proxy"|trans }}
+                    </a>
+                </li>
+                <li class="next">
+                    {{ "nice_to_have.ssl_proxy"|trans }}
+                    <a target="_blank" href="{{ "link.url.other_ssl_proxy"|trans }}">
+                        {{ "link.label.other_ssl_proxy"|trans }}
+                    </a>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.thanks"|trans }}</h2>
+            <ul>
+                <li>{{ "thanks.to.and"|trans }}
+                    <ul>
+                        <li>{{ "thanks.to.afsy"|trans }}</li>
+                        <li>{{ "thanks.to.yoopies"|trans }}</li>
+                        <li>{{ "thanks.to.theodo"|trans }}</li>
+                        <li>
+                            <a target="_blank" href="{{ "link.url.twitter_paulgreg"|trans }}">
+                                @{{ "link.label.twitter_paulgreg"|trans }}
+                            </a> & <a target="_blank" href="{{ "link.url.twitter_michaelc"|trans }}">
+                                @{{ "link.label.twitter_michaelc"|trans }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>{{ "title_section.questions"|trans }}</h2>
+            {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+	    </div>
+    </section>
+    <section class="slide">
+            <div>
+                <h2>Sources</h2>
+                {% include "WeavingTheWebSlideshowBundle:Slide:includes/sources.html.twig" %}
+        {% include "WeavingTheWebSlideshowBundle:Slide:includes/footer.html.twig" %}
+        </div>
+    </section>
+{% endblock %}

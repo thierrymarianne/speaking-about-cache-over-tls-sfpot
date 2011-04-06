@@ -1,0 +1,76 @@
+
+#Cover h2 {
+    margin: 140px 0 0;
+    text-align: center;
+    font-size: 70px;
+}
+#Cover p {
+    margin: 10px 0 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.slide .sources {
+    font-size: 10px;
+}
+
+a,
+a:active,
+a:link,
+a:visited,
+a:hover,
+.slide h2 {
+    color: #69be9f;
+}
+
+a.black,
+a.black:active,
+a.black:link,
+a.black:visited,
+a.black:hover {
+    color: #000;
+}
+
+.example {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.footer {
+    font-size: 15px;
+    width: 100%;
+}
+    .footer .left {
+        bottom: 30px;
+        position: absolute;
+        left: 50px;
+    }
+
+    .footer .left a.black,
+    .footer .left a.black:link,
+    .footer .left a.black:active,
+    .footer .left a.black:visited,
+    .footer .left a.black:hover {
+        border-bottom: 0px;
+        text-decoration: none;
+    }
+
+    .footer .right {
+        bottom: 30px;
+        right: 50px;
+        position: absolute;
+    }
+
+.slide pre code {
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.slide:after{
+    background: url(../images/green_ribbon.svg);
+}
+
+.yes-we-scan {
+    height: 350px
+}

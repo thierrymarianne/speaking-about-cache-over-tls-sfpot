@@ -1,0 +1,20 @@
+<code>    location / {</code>
+<code>        add_header            Front-End-Https   on;</code>
+<code><br /></code>
+<code>        <mark>proxy_pass            http://127.0.0.1:8080;</mark></code>
+<code><br /></code>
+<code>        proxy_next_upstream   error timeout invalid_header http_500 http_502 http_503 http_504;</code>
+<code><br /></code>
+<code>        proxy_set_header      Accept-Encoding	"";</code>
+<code>        proxy_set_header      Host                $host;</code>
+<code>        proxy_set_header      X-Real-IP           $remote_addr;</code>
+<code>        <mark class="important">proxy_set_header      X-Forwarded-For     $proxy_add_x_forwarded_for;</mark></code>
+<code>        <mark class="important">proxy_set_header      X-Forwarded-Host    $host;</mark></code>
+<code>        <mark class="important">proxy_set_header      X-Forwarded-Proto   $scheme;</mark></code>
+<code><br /></code>
+<code>        proxy_hide_header     X-Varnish;</code>
+<code>        proxy_hide_header     X-Powered-By;</code>
+<code>        proxy_hide_header     Via;</code>
+<code><br /></code>
+<code>        proxy_redirect        off;</code>
+<code>    }</code>

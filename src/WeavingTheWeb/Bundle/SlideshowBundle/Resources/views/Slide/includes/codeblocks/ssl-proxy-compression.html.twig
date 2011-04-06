@@ -1,0 +1,15 @@
+<code>server {</code>
+<code>    // [...]</code>
+<code>    gzip                on;</code>
+<code>    gzip_disable        "msie6"; # Please, let it rest in peace</code>
+<code><br /></code>
+<code>    gzip_min_length     20;</code>
+<code>    gzip_vary           on;</code>
+<code>    <mark>gzip_proxied        any;</mark></code>
+<code>    gzip_comp_level     6;</code>
+<code>    gzip_buffers        16 8k;</code>
+<code>    gzip_http_version   1.1;</code>
+<code>    gzip_types          text/plain text/css application/json application/javascript application/x-javascript \
+                              text/xml application/xml application/xml+rss text/javascript;</code>
+<code>    // [...]</code>
+<code>}</code>

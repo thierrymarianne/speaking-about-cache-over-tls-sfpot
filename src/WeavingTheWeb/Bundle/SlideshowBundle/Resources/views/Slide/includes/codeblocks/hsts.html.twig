@@ -1,0 +1,15 @@
+<code></code>
+<code># Nginx</code>
+<code>add_header Strict-Transport-Security max-age=63072000;</code>
+<code><br /></code>
+<code># Lighttpd</code>
+<code>server.modules += ( "mod_setenv" )</code>
+<code>$HTTP["scheme"] == "https" {</code>
+<code>    setenv.add-response-header  = ( "Strict-Transport-Security" => "max-age=63072000")</code>
+<code>}</code>
+<code><br /></code>
+<code></code>
+<code># Apache</code>
+<code># Optionally load the headers module:</code>
+<code>LoadModule headers_module modules/mod_headers.so</code>
+<code>Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"</code>

@@ -1,0 +1,12 @@
+parameters:
+    database_driver:    ~
+    database_host:      ~
+    database_port:      ~
+    database_name:      ~
+    database_user:      ~
+    database_password:  ~
+
+    default_locale:     fr
+    locale:             %default_locale%
+
+    secret:             rM4CJR6KgBqE8H9UjE5tVR78

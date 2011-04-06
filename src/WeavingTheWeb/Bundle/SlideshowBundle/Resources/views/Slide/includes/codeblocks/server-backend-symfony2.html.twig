@@ -1,0 +1,18 @@
+<code>	{{ "<Directory /var/www/symfony2>"|e }}</code>
+<code>		AddCharset utf-8 .*</code>
+<code><br /></code>
+<code>		Order allow,deny</code>
+<code>		# [2] Allow access from localhost only</code>
+<code>		<mark class="important">Allow from 127.0.0.1</mark></code>
+
+<code>		{{ "<IfModule mod_rewrite.c>"|e }}</code>
+<code>			RewriteEngine on</code>
+<code>			RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$</code>
+<code>			RewriteRule ^(.*) - [E=BASE:%1]</code>
+<code>			RewriteCond %{ENV:REDIRECT_STATUS} ^$</code>
+<code>			RewriteRule ^app\.php(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]</code>
+<code>			RewriteCond %{REQUEST_FILENAME} -f</code>
+<code>			RewriteRule .? - [L]</code>
+<code>			RewriteRule .? %{ENV:BASE}/app.php [L]</code>
+<code>		{{ "</IfModule>"|e }}</code>
+<code>	{{ "</Directory>"|e }}</code>

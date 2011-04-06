@@ -1,0 +1,11 @@
+<code># [1] Redirects to secured-front-server.net:443</code>
+<code># <mark class="important">Nginx et Apache ne peuvent pas écouter sur le même port</mark></code>
+<code>{{ "<VirtualHost *:80>"|e }}</code>
+<code>   ServerAdmin host@ed-by.me</code>
+<code>   ServerName ssl-termination.net</code>
+<code><br /></code>
+<code>   {{ "<IfModule mod_rewrite.c>"|e }}</code>
+<code>           RewriteEngine on</code>
+<code>           RewriteRule ^/(.*) https://%{SERVER_NAME}/$1 [L]</code>
+<code>   {{ "</IfModule>"|e }}</code>
+<code>{{ "</VirtualHost>"|e }}</code>

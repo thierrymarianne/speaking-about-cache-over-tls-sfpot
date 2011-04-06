@@ -1,0 +1,19 @@
+<code><code># See also http://symfony.com/doc/current/cookbook/cache/varnish.html</code></code>
+<code>sub vcl_recv {</code>
+<code><br /></code>
+<code>    if (req.http.Accept-Encoding) {</code>
+<code>        if (req.url ~ "\.(jpg|png|gif|gz|tgz|bz2|tbz|mp3|ogg)$") {</code>
+<code>            # No point in compressing these</code>
+<code>            remove req.http.Accept-Encoding;</code>
+<code>        } elsif (req.http.Accept-Encoding ~ "gzip") {</code>
+<code>            <mark>set req.http.Accept-Encoding = "gzip";</code></mark>
+<code>        } elsif (req.http.Accept-Encoding ~ "deflate" && req.http.user-agent !~ "MSIE") {</code>
+<code>            set req.http.Accept-Encoding = "deflate";</code>
+<code>        } else {</code>
+<code>            # unkown algorithm</code>
+<code>            remove req.http.Accept-Encoding;</code>
+<code>        }</code>
+<code>    }</code>
+<code><br /></code>
+<code>    # [...]</code>
+<code>}</code>

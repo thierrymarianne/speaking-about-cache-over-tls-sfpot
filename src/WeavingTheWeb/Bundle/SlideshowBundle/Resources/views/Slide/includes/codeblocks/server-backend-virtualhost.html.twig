@@ -1,0 +1,24 @@
+<code>{{ "<VirtualHost 127.0.0.1:80>"|e }}</code>
+<code>  ServerAdmin host@ed-by.me</code>
+<code>  ServerName 127.0.0.1 </code>
+<code></code>
+<code>  DocumentRoot /var/www/symfony</code>
+
+<code>  {{ "<Directory />"|e }}</code>
+<code>      AllowOverride None</code>
+<code>  {{ "</Directory>"|e }}</code>
+
+<code>  ErrorLog ${APACHE_LOG_DIR}/error.symfony2.log</code>
+<code>  CustomLog ${APACHE_LOG_DIR}/access.symfony2.log combined</code>
+
+<code>  # Préparer vous au pire et à creuser</code>
+<code>  # Possible values include: debug, info, notice, warn, error, crit,</code>
+<code>  # alert, emerg.</code>
+<code>  # httpd 2.4.6 </code>
+<code>  # <mark class="">LogLevel debug</mark></code>
+<code>  # <mark class="">Loglevel alert rewrite:trace8</mark></code>
+<code>  # httpd 2.2 </code>
+<code>  # <mark class="">RewriteLog "/usr/local/var/apache/logs/rewrite.log"</mark></code>
+<code>  # <mark class="">RewriteLogLevel 9</mark></code>
+
+<code>{{ "</VirtualHost>"|e }}</code>

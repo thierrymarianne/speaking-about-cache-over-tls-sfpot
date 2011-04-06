@@ -1,0 +1,13 @@
+\..*\.swp
+\.idea
+\.DS_Store
+
+/app/cache
+/app/config/parameters.yml
+/app/logs
+
+/vendor
+
+/web/bundles
+/web/js
+/web/css

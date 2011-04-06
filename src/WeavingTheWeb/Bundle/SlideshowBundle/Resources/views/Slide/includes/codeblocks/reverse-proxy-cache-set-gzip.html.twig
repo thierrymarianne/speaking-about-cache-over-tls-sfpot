@@ -1,0 +1,11 @@
+<code>sub vcl_fetch {</code>
+<code>    if (req.url ~ "\.(css|js|min|)$") {</code>
+<code>        <mark>set beresp.do_gzip = true;</mark></code>
+<code>    }</code>
+<code><br /></code>
+<code>    # ESI</code>
+<code>    if (beresp.http.Surrogate-Control ~ "ESI/1.0") {</code>
+<code>        unset beresp.http.Surrogate-Control;</code>
+<code>        set beresp.do_esi = true;</code>
+<code>    }</code>
+<code>}</code>

@@ -1,0 +1,202 @@
+title: CACHE + SSL/TLS
+title_slideshow: Comment servir du contenu rendu avec Symfony, mis en cache par Varnish et chiffrés avec Nginx
+title_section:
+    header: AFSY - Association Francophone des utilisateurs de Symfony
+    block_cipher: Chiffrement par bloc (CBC)
+    breaking_news: Conclusion
+    stream_cipher: Chiffrement par flot
+    protocols: Protocoles sécurisant HTTP
+    how_to_make_things_better: Comment découvrir les points d'amélioration ?
+    product_backlog: Objectifs à atteindre
+    performance: Pourquoi une mise en cache des contenus ?
+    proof_of_concept: Preuve de concept
+    handshaking: Handshaking
+    security:
+        example: Toujours pas convaincu ?
+        risks: Pourquoi sécurise-t-on le trafic ?
+        counter_measures: Comment se prémunir des risques ?
+    vulnerabilities: Vulnérabilités
+    know_thyself: Gnothi seauton (Know Thyself)
+    thanks: Merci pour votre attention !
+    issues: Écueils rencontrés
+    configuration.reverse_proxy_cache: Reverse proxy cache
+    questions: Questions ?
+    sources: Sources
+    subtleties:
+        backend_server: Backend Server (Apache)
+        headers: Entêtes proxy SSL
+        force_https: Forcer HTTPS avec Symfony2
+        force_https_or_not: Forcer HTTPS avec Symfony2 ou pas
+        ssl_proxy: SSL Proxy (Nginx)
+        compression_ssl_proxy: Compression déléguée au proxy SSL
+        compression_backend: Compression déléguée au Backend
+        compression_reverse_proxy_cache: ...ou au Reverse-Cache Proxy
+    nice_to_have: Une journée ne compte que 24h (approximativement)...
+    oxymore: Performances avec SSL ?
+subtitle_author: Développeur web
+introduction:
+    about_security: Le monde (de la sécurité) n'est pas figé
+    about_testing: Rien ne vaut l'expérimentation !
+performance:
+    speed: Réponses retournées plus rapidement
+    robustness: Meilleure tolérance aux pannes (relative)
+    traffic: Plus grande capacité d'accueil des visites
+security:
+    issue:
+        privacy: Écoutes sur le réseau (MITM)
+        authentication: Usurpation d'identité
+        integrity: Altération des données échangées
+    requirements:
+        privacy: Confidentialité des échanges
+        authentication: Authentification des interlocuteurs
+        integrity: Intégrité des données échangées
+    proposal: Par le chiffrement des communications
+handshaking:
+    client:
+        1: Client
+        2: valeur pseudo-aléatoire
+        3: id de session
+        4: liste de chiffrements
+    server:
+        1: Serveur
+        2: valeur pseudo-aléatoire
+        3: id de session
+        4: certificat
+        5: liste de chiffrements
+definition:
+    block_cipher:
+        1: Découpage des données
+        2: |
+            Chiffrement des blocs
+    stream_cipher:
+        1: Un générateur de nombres pseudo-aléatoires
+        2: XOR entre bit de la sortie du génerateur et un bit de la donnée
+        3: Aucune contrainte sur la longueur des données
+event:
+    cantine:
+          ssl:
+              who: par Benjamin Sonntag (co-fondateur de La Quadrature du Net)
+              where: à la Cantine
+              when: le 20 Septembre 2013
+              what: « Il était une fois SSL/TLS »
+link:
+    url:
+        aes: http://fr.wikipedia.org/wiki/Standard_de_chiffrement_avanc%C3%A9
+        blowfish: http://fr.wikipedia.org/wiki/Blowfish
+        crypto_js: https://code.google.com/p/crypto-js/
+        cryptography_extensions_php: http://php.net/manual/en/refs.crypto.php
+        forward_secrecy_google: https://www.varnish-cache.org/docs/trunk/phk/ssl.html
+        grc: https://www.grc.com/securitynow.htm
+        ietf: http://www.ietf.org
+        imperial_violet: https://www.imperialviolet.org
+        imperial_violet_overclocking_ssl: https://www.imperialviolet.org/2010/06/25/overclocking-ssl.html
+        licence: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+        nist: http://csrc.nist.gov
+        netcraft_extension: http://news.netcraft.com/archives/2013/09/06/perfect-forward-secrecy-in-the-netcraft-extension.html
+        other_cache_proxy: http://wiki.nginx.org/HttpProxyModule
+        other_ssl_proxy: https://www.stunnel.org
+        pycrypto: https://github.com/dlitz/pycrypto
+        rc4: http://fr.wikipedia.org/wiki/RC4
+        rfc_2616: http://tools.ietf.org/html/rfc2616
+        rfc_2246: http://tools.ietf.org/html/rfc2246
+        rfc_4346: http://tools.ietf.org/html/rfc4346
+        rfc_5246: http://tools.ietf.org/html/rfc5246
+        rfc_6101: http://tools.ietf.org/html/rfc6101
+        cipher_stream: http://en.wikipedia.org/wiki/Stream_cipher
+        security_now: https://www.grc.com/securitynow.htm
+        ssllabs: https://www.ssllabs.com/ssltest/index.html
+        theodo: https://www.theodo.fr
+        theodo_joinus: https://www.theodo.fr/fr/joinus
+        twitter_theodo: https://twitter.com/theodo
+        twitter_thierrymarianne: https://twitter.com/thierrymarianne
+        twitter_michaelc: https://twitter.com/michaelc_
+        twitter_paulgreg: https://twitter.com/paulgreg
+        varnish_ssl: https://www.varnish-cache.org/docs/trunk/phk/ssl.html
+        techsnap: http://www.jupiterbroadcasting.com/show/techsnap/
+        trusting_proxies: http://symfony.com/doc/current/components/http_foundation/trusting_proxies.html
+    label:
+        crypto_js: CryptoJS
+        cryptography_extensions_php: Extensions PHP
+        licence: Creative Commons Attribution-ShareAlike 3.0 Unported License
+        netcraft_extension: Extension navigateur proposée par Netcraft
+        overclocking_ssl: https://www.imperialviolet.org/2010/06/25/overclocking-ssl.html
+        forward_secrecy_google: Protéger les données sur le long terme avec la confidentialité persistante
+        grc: Gibson Research Corporation
+        ietf: IETF (The Internet Engineering Task Force)
+        imperial_violet: ImperialViolet
+        email_author: thierrym
+        nist: NIST (National Institute of Standards and Technology)
+        other_cache_proxy: nginx HttpProxyModule
+        other_ssl_proxy: stunnel
+        pycrypto: PyCrypto
+        rc4: RC4
+        rfc_2616: RFC 2616
+        rfc_2246: RFC 2246
+        rfc_4346: RFC 4346
+        rfc_5246: RFC 5246
+        rfc_6101: RFC 6101
+        cipher_stream: Chiffrement par flot
+        security_now: GRC (Gibson Research Corporation)
+        ssllabs: SSL Server Test (by SSL Labs)
+        theodo: Theodo
+        theodo_joinus: Theodo recrute!
+        twitter_michaelc: michaelc
+        twitter_paulgreg: paulgreg
+        twitter_theodo: theodo
+        twitter_thierrymarianne: thierrymarianne
+        varnish_ssl: Poul Henning à propos du support de SSL dans Varnish, en 2011
+        techsnap: TechSNAP
+        trusting_proxies: Trusting Proxies (doc Symfony2)
+story:
+    performance:
+        Mettre en cache du contenu dont la génération est coûteuse # dont la construction est coûteuse en temps processeur
+    security:
+        Protéger les utilisateurs ayant accès aux ressources cachées # dont les formes brutes sont elles-mêmes déjà protégées grâce à SSL
+protocols:
+    caching: HTTP 1.1 et son « Accélération » # 1948
+    securing_exchanges: Sécurisation des échanges
+question_bounty: Un verre à la première personne qui me pose une question !
+proof_of_concept:
+    backend: Backend - Apache (2.2.22) + PHP (5.5) + Symfony (2.3)
+    reverse_proxy_cache: Reverse proxy cache - Varnish (3.0.2)
+    ssl_proxy: SSL proxy - Nginx (1.4.2)
+    stack: Nginx <--> Varnish <--> Apache
+oxymore:
+    1: In January this year (2010), Gmail switched to using HTTPS for everything by default. [...]
+    2: In order to do this we had to deploy no additional machines and no special hardware. [...]
+    3: SSL/TLS is not computationally expensive any more.
+subtleties:
+    compression:
+        backend: La compression peut être effectuée par Apache
+        reverse_proxy_cache: La compression peut être effectuée par Varnish
+        ssl_proxy: La compression peut être effectuée par Nginx
+    routing:
+        1: Risques de boucles de redirection sous certaines conditions
+        2: Varnish est seul à communiquer avec le backend sur 127.0.0.1:80
+vulnerability:
+    beast: Récupération du cookie de session
+    breach: Prolongement de l'attaque CRIME
+    crime:
+         Détournement de session
+    stripssl: StripSSL / CSRF / XSS
+    hsts: HSTS (HTTP Strict Transport Security)
+counter_measures:
+    beast: Utiliser RC4 comme chiffrement avec SSL v3.0 et TLS v1.0
+    breach: Désactiver la compression HTTP pour diminuer les risques (solution la plus drastique)
+    crime:
+         1: Désactiver la compression SSL/TLS
+configuration:
+    apache:
+          1: Rediriger le trafic arrivant sur le port 80 vers le port 443
+          2: L'accès au backend ne doit possible qu'à partir de l'adresse de loopback
+nice_to_have:
+    benchmark: Benchmarks (JMeter)
+    cache_proxy: Autres solutions de mise en cache
+    ssl_proxy: Autres solutions de chiffrement SSL/TLS
+thanks:
+    to:
+        and: Et merci à
+        afsy: L'AFSY
+        yoopies: Yoopies
+        theodo: Theodo
+        paulgreg: Grégory Paul

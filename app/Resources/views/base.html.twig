@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>{{ "title"|trans([], 'messages') }}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% stylesheets
+        'bundles/weavingthewebslideshow/shower/themes/ribbon/styles/screen.css'
+        'bundles/weavingthewebslideshow/css/layout.css'
+        output='css/showr.css' filter="cssrewrite" %}
+        <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+    <link rel="icon" type="image/x-icon" href="/theodo.ico" />
+    <link rel="shortcut icon" href="/theodo.ico">
+</head>
+<body class="list">
+    {% block content %}{% endblock %}
+    {% javascripts
+        'bundles/weavingthewebslideshow/shower/shower.js'
+        output='js/showr.js' %}
+
+        <script src="{{ asset_url }}" type="text/javascript"></script>
+    {% endjavascripts %}
+    {# Copyright © 2013 Yours Truly, Famous Inc. #}
+    {# Photos by John Carey, fiftyfootshadows.net #}
+</body>
+</html>

@@ -1,0 +1,5 @@
+weaving_the_web_slideshow:
+    resource: "@WeavingTheWebSlideshowBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

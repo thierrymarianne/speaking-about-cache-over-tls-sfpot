@@ -1,0 +1,14 @@
+<code># security.yml</code>
+<code># http://symfony.com/doc/current/cookbook/security/force_https.html</code>
+<code>access_control:</code>
+<code>    - path: ^/login</code>
+<code>      roles: IS_AUTHENTICATED_ANONYMOUSLY</code>
+<code>      requires_channel: https</code>
+<code><br /></code>
+<code># routing.yml</code>
+<code># http://symfony.com/doc/current/book/routing.html</code>
+<code>secure:</code>
+<code>    pattern:  /secure</code>
+<code>    defaults: { _controller: AcmeDemoBundle:Main:secure }</code>
+<code>    requirements:</code>
+<code>        _scheme:  https</code>

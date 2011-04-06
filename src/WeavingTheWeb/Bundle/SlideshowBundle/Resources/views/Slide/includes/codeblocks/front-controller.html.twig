@@ -1,0 +1,11 @@
+<code>{{ '<?php'|e }}</code>
+<code>// /web/app.php </code>
+<code></code>
+<code>// [...]</code>
+<code></code>
+<code>Request::setTrustedProxies(array('127.0.0.1'));</code>
+<code>// [...]</code>
+<code></code>
+<code>$request->setTrustedHeaderName(Request::HEADER_CLIENT_PROTO, 'X-Proxy-Proto');</code>
+<code>$request->setTrustedHeaderName(Request::HEADER_CLIENT_IP, 'X-Proxy-For');</code>
+<code>$request->setTrustedHeaderName(Request::HEADER_CLIENT_HOST, 'X-Proxy-Host');</code>
