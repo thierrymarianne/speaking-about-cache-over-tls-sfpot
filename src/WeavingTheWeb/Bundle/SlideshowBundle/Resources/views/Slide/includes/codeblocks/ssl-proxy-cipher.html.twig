@@ -3,15 +3,13 @@
 <code>    ssl		    on;</code>
 <code>    server_name	ssl-termination.net;</code>
 <code>    # [...]</code>
-<code><br /></code>
 <code>    ssl_certificate             /etc/ssl/private/signed-certificate.crt;</code>
 <code>    ssl_certificate_key         /etc/ssl/private/private.key;</code>
 <code>    # réduction des versions de SSL / TLS proposées par le serveur</code>
-<code>    <mark>ssl_protocols               SSLv3 TLSv1 TLSv1.1 TLSv1.2;</mark></code>
+<code>    <mark>ssl_protocols               TLSv1 TLSv1.1 TLSv1.2;</mark></code>
 <code>    # réduction de la liste algorithmes de chiffrements proposés par le serveur</code>
-<code>    <mark>ssl_ciphers                 RC4:HIGH:!aNULL:!MD5;</mark></code>
+<code>    <mark>ssl_ciphers                 ALL:!EXP:!LOW:!DSS:!3DES:!PSK:!aNULL:!eNULL:!RC4:HIGH:!aNULL:!MD5;</mark></code>
 <code>    <mark>ssl_prefer_server_ciphers   on;</mark></code>
-<code><br /></code>
 <code>    keepalive_timeout    60;</code>
 <code>    ssl_session_cache    shared:SSL:10m;</code>
 <code>    ssl_session_timeout  10m;</code>
