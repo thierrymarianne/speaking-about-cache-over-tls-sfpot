@@ -1,36 +1,34 @@
 Cache + SSL / TLS
 ========================
 
-Sujet présenté lors du sfPot parisien du 17 septembre 2013 à la Pépinière 27
+Topic discussed the 17th of september 2013 at La Pépinière 27 in Paris
 
-[Présentation au format HTML](http://cache-ssl-tls.weaving-the-web.org/show#Cover)
+[Slideshow - HTML - French version](http://cache-ssl-tls.weaving-the-web.org/show#Cover)
 
-[Présentation au format PDF](https://github.com/thierrymarianne/cache-ssl-tls/blob/master/CACHE_SSL_TLS.pdf)
+[Slideshow - PDF - French version](https://github.com/thierrymarianne/cache-ssl-tls/blob/master/CACHE_SSL_TLS.pdf)
 
-[Événement Meetup](http://www.meetup.com/afsy-sfpot/events/139415812/)
+[Meetup Event](http://www.meetup.com/afsy-sfpot/events/139415812/)
 
-[Bonnes pratiques selon SSLLabs](https://www.ssllabs.com/projects/best-practices/)
+[Best practices (SSLLabs)](https://www.ssllabs.com/projects/best-practices/)
 
-[Serveur de test SSLLabs](https://www.ssllabs.com/ssltest/index.html)
+[Testing SSL server (SSLLabs)](https://www.ssllabs.com/ssltest/index.html)
 
-[Association francophone des utilisateurs de Symfony](http://afsy.fr/)
+[AFSY (Association francophone des utilisateurs de Symfony)](http://afsy.fr/)
 
-Générer votre clef Diffie-Hellman à l'aide de cette commande (ça peut prendre un certain temps)
+Generate your Diffie-Hellman key using following openssl command (it may take a while)
 
     openssl dhparam -out /etc/ssl/private/dh4096.pem -5 4096
 
-A faire
+TODO
 ========================
 
-Configuration de DNSSEC pour mise en place de TLSA
+DNSSEC configuration for TLSA
 
 Changelog
 ========================
 
-A la suite de la conférence de Benjamin Sonntag ayant lieu le 20 Septembre 2013 à la Cantine,
-les points suivants ont étés revus :
-* Réduction de la liste des chiffrements proposés par SSL proxy
-* Aucune version de SSL servies (dont SSL v3.0), seules les versions de TLS sont proposées
-* Ajout du paramètre de clef pour Diffie-Hellman ([Perfect Forward Secrecy](http://news.netcraft.com/archives/2013/06/25/ssl-intercepted-today-decrypted-tomorrow.html))
-* Ajout de l'entête HTTP Strict Transport Security dans la configuration du SSL proxy (nginx)
- (en plus de ne l'avoir eu auparavant dans les fichiers de configuration exemple séparés uniquement)
+Benjamin Sonntag talking about SSL/TLS the 20th of Septembre 2013 at La Cantine in Paris, led me to apply the following changes
+* Reduction of the cipher suites list offered by the SSL proxy (nginx)
+* SSL v3.0 has been removed from the list of protocols offered by the SSL proxy
+* A Diffie-Hellman key directive has been added to the SSL proxy configuration ([Perfect Forward Secrecy](http://news.netcraft.com/archives/2013/06/25/ssl-intercepted-today-decrypted-tomorrow.html))
+* A HTTP Strict Transport Security directive has been added to the SSL proxy configuration (nginx)
