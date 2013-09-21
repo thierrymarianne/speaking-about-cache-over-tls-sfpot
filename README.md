@@ -9,6 +9,7 @@ Sujet présenté lors du sfPot parisien du 17 septembre 2013 à la Pépinière 2
 
 [Événement Meetup](http://www.meetup.com/afsy-sfpot/events/139415812/)
 
+[Bonnes pratiques selon SSLLabs](https://www.ssllabs.com/projects/best-practices/)
 [Association francophone des utilisateurs de Symfony](http://afsy.fr/)
 
 Générer votre clef Diffie-Hellman à l'aide de cette commande (ça peut prendre un certain temps)
