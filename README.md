@@ -14,7 +14,8 @@ Topic discussed the 17th of september 2013 at La Pépinière 27 in Paris
 
 [Best practices (SSLLabs)](https://www.ssllabs.com/projects/best-practices/)
 
-[Testing SSL server (SSLLabs)](https://www.ssllabs.com/ssltest/index.html)
+[Testing SSL configuration (SSLLabs)](https://www.ssllabs.com/ssltest/index.html)  
+e.g. https://www.ssllabs.com/ssltest/analyze.html?d=start.weaving-the-web.org
 
 [AFSY (Association francophone des utilisateurs de Symfony)](http://afsy.fr/)
 
