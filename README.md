@@ -18,3 +18,9 @@ Sujet présenté lors du sfPot parisien du 17 septembre 2013 à la Pépinière 2
 Générer votre clef Diffie-Hellman à l'aide de cette commande (ça peut prendre un certain temps)
 
     openssl dhparam -out /etc/ssl/private/dh4096.pem -5 4096
+
+A faire
+========================
+
+Configuration de DNSSEC pour mise en place de TLSA
+
