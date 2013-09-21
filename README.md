@@ -16,4 +16,5 @@ Sujet présenté lors du sfPot parisien du 17 septembre 2013 à la Pépinière 2
 [Association francophone des utilisateurs de Symfony](http://afsy.fr/)
 
 Générer votre clef Diffie-Hellman à l'aide de cette commande (ça peut prendre un certain temps)
-`openssl dhparam -out /etc/ssl/private/dh4096.pem -5 4096`
+
+    openssl dhparam -out /etc/ssl/private/dh4096.pem -5 4096
