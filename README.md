@@ -1,6 +1,9 @@
 Cache + SSL / TLS
 ========================
 
+1) Description
+--------------------------------
+
 Topic discussed the 17th of september 2013 at La Pépinière 27 in Paris
 
 [Slideshow - HTML - French version](http://cache-ssl-tls.weaving-the-web.org/show#Cover)
@@ -19,15 +22,16 @@ Generate your Diffie-Hellman key using following openssl command (it may take a 
 
     openssl dhparam -out /etc/ssl/private/dh4096.pem -5 4096
 
-TODO
-========================
+2) Todo
+--------------------------------
 
 DNSSEC configuration for TLSA
 
-Changelog
-========================
+2) Changelog
+--------------------------------
 
-Benjamin Sonntag talking about SSL/TLS the 20th of Septembre 2013 at La Cantine in Paris, led me to apply the following changes
+The following changes were applied right after Benjamin Sonntag talked about SSL/TLS at La Cantine in Paris on the 20th of Septembre 2013 :
+
 * Reduction of the cipher suites list offered by the SSL proxy (nginx)
 * SSL v3.0 has been removed from the list of protocols offered by the SSL proxy
 * A Diffie-Hellman key directive has been added to the SSL proxy configuration ([Perfect Forward Secrecy](http://news.netcraft.com/archives/2013/06/25/ssl-intercepted-today-decrypted-tomorrow.html))
