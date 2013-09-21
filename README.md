@@ -24,3 +24,13 @@ A faire
 
 Configuration de DNSSEC pour mise en place de TLSA
 
+Changelog
+========================
+
+A la suite de la conférence de Benjamin Sonntag ayant lieu le 20 Septembre 2013 à la Cantine,
+les points suivants ont étés revus :
+* Réduction de la liste des chiffrements proposés par SSL proxy
+* Aucune version de SSL servies (dont SSL v3.0), seules les versions de TLS sont proposées
+* Ajout du paramètre de clef pour Diffie-Hellman ([Perfect Forward Secrecy](http://news.netcraft.com/archives/2013/06/25/ssl-intercepted-today-decrypted-tomorrow.html))
+* Ajout de l'entête HTTP Strict Transport Security dans la configuration du SSL proxy (nginx)
+ (en plus de ne l'avoir eu auparavant dans les fichiers de configuration exemple séparés uniquement)
