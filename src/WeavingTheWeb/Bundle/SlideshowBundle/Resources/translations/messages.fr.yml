@@ -82,6 +82,7 @@ event:
 link:
     url:
         aes: http://fr.wikipedia.org/wiki/Standard_de_chiffrement_avanc%C3%A9
+        beast_rc4: https://community.qualys.com/blogs/securitylabs/2013/09/10/is-beast-still-a-threat
         blowfish: http://fr.wikipedia.org/wiki/Blowfish
         crypto_js: https://code.google.com/p/crypto-js/
         cryptography_extensions_php: http://php.net/manual/en/refs.crypto.php
@@ -115,6 +116,7 @@ link:
         techsnap: http://www.jupiterbroadcasting.com/show/techsnap/
         trusting_proxies: http://symfony.com/doc/current/components/http_foundation/trusting_proxies.html
     label:
+        beast_rc4: Is BEAST Still a Threat?
         crypto_js: CryptoJS
         cryptography_extensions_php: Extensions PHP
         licence: Creative Commons Attribution-ShareAlike 3.0 Unported License
