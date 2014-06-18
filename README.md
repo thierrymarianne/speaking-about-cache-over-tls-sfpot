@@ -28,7 +28,7 @@ Generate your Diffie-Hellman key using following openssl command (it may take a 
 
 DNSSEC configuration for TLSA
 
-2) Changelog
+3) Changelog
 --------------------------------
 
 The following changes were applied right after Benjamin Sonntag talked about SSL/TLS at La Cantine in Paris on the 20th of Septembre 2013 :
