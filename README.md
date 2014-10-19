@@ -6,7 +6,7 @@ Cache + SSL / TLS
 
 Topic discussed the 17th of september 2013 at La Pépinière 27 in Paris
 
-[Slideshow - HTML - French version](http://cache-ssl-tls.weaving-the-web.org/show#Cover)
+[Slideshow - HTML - French version](https://cache.over.tls.introduc.ed-by.me/show#Cover)
 
 [Slideshow - PDF - French version](https://github.com/thierrymarianne/cache-ssl-tls/blob/master/CACHE_SSL_TLS.pdf)
 
