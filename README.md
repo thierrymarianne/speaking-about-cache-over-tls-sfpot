@@ -1,12 +1,8 @@
-Cache + SSL / TLS
-========================
+# Cache + SSL / TLS
 
-1) Description
---------------------------------
+## Description
 
 Topic discussed the 17th of september 2013 at La Pépinière 27 in Paris
-
-[Slideshow - HTML - French version](https://cache.over.tls.introduc.ed-by.me/show#Cover)
 
 [Slideshow - PDF - French version](https://github.com/thierrymarianne/cache-ssl-tls/blob/master/CACHE_SSL_TLS.pdf)
 
@@ -23,13 +19,7 @@ Generate your Diffie-Hellman key using following openssl command (it may take a 
 
     openssl dhparam -out /etc/ssl/private/dh4096.pem -5 4096
 
-2) Todo
---------------------------------
-
-DNSSEC configuration for TLSA
-
-3) Changelog
---------------------------------
+## Changelog
 
 The following changes were applied right after Benjamin Sonntag talked about SSL/TLS at La Cantine in Paris on the 20th of Septembre 2013 :
 
